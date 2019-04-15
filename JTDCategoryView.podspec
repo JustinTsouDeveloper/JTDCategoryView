@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
           #1.
           s.name               = "JTDCategoryView"
           #2.
-          s.version            = "1.0.2"
+          s.version            = "1.1.0"
           #3.  
           s.summary         = "Sort description of 'JTDCategoryView' framework"
           #4.
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
           #7.
           s.platform            = :ios, "11.0"
           #8.
-          s.source              = { :git => "https://github.com/JustinTsouDeveloper/JTDCategoryView.git", :tag => "1.0.2" }
+          s.source              = { :git => "https://github.com/JustinTsouDeveloper/JTDCategoryView.git", :tag => "1.1.0" }
           #9.
           s.source_files     = "JTDCategoryView", "JTDCategoryView/**/*.{h,m,swift,xib}"
 	  #10.
