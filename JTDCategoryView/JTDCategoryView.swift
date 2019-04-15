@@ -40,7 +40,7 @@ public class JTDCategoryView: UIView {
     
     private func setupCollectionView(frame:CGRect) {
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "CategoryView", bundle: bundle)
+        let nib = UINib(nibName: "JTDCategoryView", bundle: bundle)
         contentView = nib.instantiate(withOwner: self, options: nil).first as? UIView
         contentView.frame = bounds
         
