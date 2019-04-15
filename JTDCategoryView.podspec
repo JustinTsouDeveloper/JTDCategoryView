@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
           #1.
           s.name               = "JTDCategoryView"
           #2.
-          s.version            = "1.0.0"
+          s.version            = "1.0.1"
           #3.  
           s.summary         = "Sort description of 'JTDCategoryView' framework"
           #4.
