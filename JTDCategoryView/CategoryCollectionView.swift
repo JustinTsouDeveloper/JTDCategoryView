@@ -99,8 +99,9 @@ extension CategoryCollectionView: UICollectionViewDataSource {
 extension CategoryCollectionView:UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        self.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        
         if self.currentIndexPath != indexPath {
-            self.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
             self.reloadData()
             self.delegates?.didCollectionViewSelectItem(category: self.categorys![indexPath.row])
         }
