@@ -46,6 +46,7 @@ public class JTDCategoryView: UIView {
         
         self.collectionViewLayout = self.setupCollectionViewFlowLayout()
         self.collectionView = CategoryCollectionView(categorys: self.categorys!, imageNames: self.imageNames! , frame: frame, layout: self.collectionViewLayout!  )
+        self.collectionView?.showsHorizontalScrollIndicator = false
         
         collectionView?.delegates = self
         contentView.addSubview(self.collectionView!)
