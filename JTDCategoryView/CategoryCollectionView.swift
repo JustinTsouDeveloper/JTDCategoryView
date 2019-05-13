@@ -44,6 +44,7 @@ class CategoryCollectionView: UICollectionView {
         self.delegate = self
         self.isPagingEnabled = true
         self.backgroundColor = .clear
+        self.showsHorizontalScrollIndicator = false
         let bundle = Bundle(for: type(of: self))
         self.register(UINib(nibName: "CategoryCell", bundle: bundle), forCellWithReuseIdentifier: "CategoryCell")
     }
