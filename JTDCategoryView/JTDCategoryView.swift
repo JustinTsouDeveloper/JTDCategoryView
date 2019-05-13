@@ -45,7 +45,8 @@ public class JTDCategoryView: UIView {
         contentView.frame = bounds
         
         self.collectionViewLayout = self.setupCollectionViewFlowLayout()
-        self.collectionView = CategoryCollectionView(categorys: self.categorys!, imageNames: self.imageNames! , frame: frame, layout: self.collectionViewLayout!  )
+        let viewFrame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
+        self.collectionView = CategoryCollectionView(categorys: self.categorys!, imageNames: self.imageNames! , frame: viewFrame, layout: self.collectionViewLayout!  )
         self.collectionView?.showsHorizontalScrollIndicator = false
         
         collectionView?.delegates = self
