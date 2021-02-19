@@ -22,6 +22,8 @@ public class JTDCategoryView: UIView {
     public weak var delegate: JTDCategoryViewDelegate?
     private let categoryAmount = 4
     
+    // MARK - View life cycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
