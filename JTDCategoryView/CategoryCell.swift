@@ -22,6 +22,7 @@ class CategoryCell: UICollectionViewCell {
     }
 
     func setCategoryImage(imageName:String) {
-            self.categoryImageView.image = UIImage(named:imageName)
+        let image = UIImage(named: "icon_search", in: Bundle(for: type(of: self)), compatibleWith: nil)
+        self.categoryImageView.image = image
     }
 }
