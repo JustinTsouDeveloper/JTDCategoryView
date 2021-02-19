@@ -16,7 +16,7 @@ public class JTDCategoryView: UIView {
     
     @IBOutlet private var contentView: UIView!
     private var categorys: Array<String>?
-    private var imageNames: Array<String>?
+    //private var imageNames: Array<String>?
     private var collectionView:CategoryCollectionView?
     private var collectionViewLayout:UICollectionViewFlowLayout?
     public weak var delegate: JTDCategoryViewDelegate?
@@ -28,10 +28,11 @@ public class JTDCategoryView: UIView {
         super.init(frame: frame)
     }
     
-    public convenience init(categorys:Array<String>,imageNames: Array<String>,frame:CGRect) {
+    //public convenience init(categorys:Array<String>,imageNames: Array<String>,frame:CGRect) {
+    public convenience init(categorys:Array<String>,frame:CGRect) {
         self.init(frame: frame)
         self.categorys = categorys
-        self.imageNames = imageNames
+        //self.imageNames = imageNames
         self.setupCollectionView(frame:frame)
     }
     
@@ -48,7 +49,8 @@ public class JTDCategoryView: UIView {
         
         self.collectionViewLayout = self.setupCollectionViewFlowLayout()
         let viewFrame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
-        self.collectionView = CategoryCollectionView(categorys: self.categorys!, imageNames: self.imageNames! , frame: viewFrame, layout: self.collectionViewLayout!  )
+//        self.collectionView = CategoryCollectionView(categorys: self.categorys!, imageNames: self.imageNames! , frame: viewFrame, layout: self.collectionViewLayout!  )
+        self.collectionView = CategoryCollectionView(categorys: self.categorys!, frame: viewFrame, layout: self.collectionViewLayout!  )
         self.collectionView?.showsHorizontalScrollIndicator = false
         
         collectionView?.delegates = self

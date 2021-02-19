@@ -15,7 +15,7 @@ protocol CategoryCollectionViewDelegate: class {
 class CategoryCollectionView: UICollectionView {
     
     private var categorys: Array<String>?
-    private var imageNames: Array<String>?
+    //private var imageNames: Array<String>?
     weak var delegates: CategoryCollectionViewDelegate?
     private var currentIndexPath:IndexPath?
     private let lightgray = UIColor(red: 211.0/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1)
@@ -27,10 +27,11 @@ class CategoryCollectionView: UICollectionView {
         super.init(frame: frame, collectionViewLayout: layout)
     }
     
-    convenience init(categorys:Array<String>,imageNames: Array<String>,frame: CGRect,layout: UICollectionViewLayout) {
+    //convenience init(categorys:Array<String>,imageNames: Array<String>,frame: CGRect,layout: UICollectionViewLayout) {
+    convenience init(categorys:Array<String>, frame: CGRect,layout: UICollectionViewLayout) {
         self.init(frame: frame, collectionViewLayout:layout)
         self.categorys = categorys
-        self.imageNames = imageNames
+        //self.imageNames = imageNames
         self.currentIndexPath = IndexPath.init(row: 0, section: 0)
         self.setupCollectionView()
     }
@@ -74,8 +75,10 @@ extension CategoryCollectionView: UICollectionViewDataSource {
         
         let category = self.categorys![indexPath.row]
         categoryCell.categoryLabel.text = category
-        let imageName = self.imageNames![indexPath.row]
-        categoryCell.setCategoryImage(imageName: imageName)
+//        let imageName = self.imageNames![indexPath.row]
+//        categoryCell.setCategoryImage(imageName: imageName)
+        
+        categoryCell.setCategoryImage()
         
         if self.currentIndexPath?.row == indexPath.row {
             categoryCell.categoryLabel.textColor = self.dimgray

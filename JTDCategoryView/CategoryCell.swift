@@ -21,7 +21,8 @@ class CategoryCell: UICollectionViewCell {
         self.lineLabel.layer.cornerRadius = self.lineLabel.bounds.height / 2
     }
 
-    func setCategoryImage(imageName:String) {
+    //func setCategoryImage(imageName:String) {
+    func setCategoryImage() {
         let image = UIImage(named: "icon_search", in: Bundle(for: type(of: self)), compatibleWith: nil)
         self.categoryImageView.image = image
     }
