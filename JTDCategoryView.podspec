@@ -25,4 +25,11 @@ Pod::Spec.new do |s|
           s.resource_bundles = {'JTDCategoryViewBundle' => ['JTDCategoryView/Assets/*.xcassets']} 
           # *.png
           # *.xcassets
+
+          # since Apple release Apple Silicon and use arm64 for the simulator, but iOS x86_64 for iOS
+          # https://github.com/CocoaPods/CocoaPods/issues/10065
+          spec.pod_target_xcconfig = {
+               'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+          }
+          spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     end
