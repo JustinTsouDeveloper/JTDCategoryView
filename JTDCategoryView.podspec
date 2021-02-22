@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
           #1.
           s.name               = "JTDCategoryView"
           #2.
-          s.version            = "1.1.9"
+          s.version            = "1.2.0"
           #3.  
           s.summary         = "Sort description of 'JTDCategoryView' framework"
           #4.
@@ -20,5 +20,9 @@ Pod::Spec.new do |s|
 	     #10.
 	     s.swift_version    = '4.2'
           #11.
-          s.resource_bundles = {'JTDCategoryView' => ['JTDCategoryView/Assets/*.xcassets']}
+          #s.resources          = "JTDCategoryView/JTDCategoryView.bundle"
+          #12.
+          s.resource_bundles = {'JTDCategoryViewBundle' => ['JTDCategoryView/Assets/*.xcassets']} 
+          # *.png
+          # *.xcassets
     end

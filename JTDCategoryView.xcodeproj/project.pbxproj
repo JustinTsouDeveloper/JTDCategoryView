@@ -39,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08AB814F25E36AA600ACB60B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				08AB814825E3594200ACB60B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		2E35370A22644BD700B7D981 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +66,7 @@
 		2E35371622644BD700B7D981 /* JTDCategoryView */ = {
 			isa = PBXGroup;
 			children = (
+				08AB814F25E36AA600ACB60B /* Assets */,
 				2E35372022644C7500B7D981 /* CategoryCell.swift */,
 				2E35371F22644C7500B7D981 /* CategoryCell.xib */,
 				2E35372122644C7500B7D981 /* CategoryCollectionView.swift */,
@@ -65,7 +74,6 @@
 				2E35372322644C7500B7D981 /* JTDCategoryView.xib */,
 				2E35371722644BD700B7D981 /* JTDCategoryView.h */,
 				2E35371822644BD700B7D981 /* Info.plist */,
-				08AB814825E3594200ACB60B /* Assets.xcassets */,
 			);
 			path = JTDCategoryView;
 			sourceTree = "<group>";
