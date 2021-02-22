@@ -23,7 +23,9 @@ class CategoryCell: UICollectionViewCell {
 
     //func setCategoryImage(imageName:String) {
     func setCategoryImage() {
-        let image = UIImage(named: "icon_search", in: Bundle(for: type(of: self)), compatibleWith: nil)
+        let path = Bundle(for: type(of: self)).resourcePath! + "/JTDCategoryView.bundle"
+        let resource_bundle = Bundle(path: path)
+        let image = UIImage(named: "icon_search", in: resource_bundle, compatibleWith: nil)
         self.categoryImageView.image = image
     }
 }
