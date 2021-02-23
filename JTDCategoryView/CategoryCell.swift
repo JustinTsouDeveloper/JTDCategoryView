@@ -23,8 +23,15 @@ class CategoryCell: UICollectionViewCell {
 
     //func setCategoryImage(imageName:String) {
     func setCategoryImage() {
-        let path = Bundle(for: type(of: self)).resourcePath! + "/JTDCategoryViewBundle.bundle"
+        // 動態寫法
+        // JTDCategoryViewBundle 定義在 podspec 中
+//        let path = Bundle(for: type(of: self)).resourcePath! + "/JTDCategoryViewBundle.bundle"
+//        let resource_bundle = Bundle(path: path)
+        
+        // 靜態寫法
+        let path = Bundle(for: type(of: self)).path(forResource: "JTDCategoryView", ofType: "framework")!
         let resource_bundle = Bundle(path: path)
+        
         let image = UIImage(named: "icon_search", in: resource_bundle, compatibleWith: nil)
         self.categoryImageView.image = image
     }

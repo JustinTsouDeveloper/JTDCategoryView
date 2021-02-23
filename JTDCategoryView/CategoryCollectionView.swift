@@ -46,8 +46,19 @@ class CategoryCollectionView: UICollectionView {
         self.isPagingEnabled = true
         self.backgroundColor = .clear
         self.showsHorizontalScrollIndicator = false
-        let bundle = Bundle(for: type(of: self))
-        self.register(UINib(nibName: "CategoryCell", bundle: bundle), forCellWithReuseIdentifier: "CategoryCell")
+        
+        // 動態寫法
+        //let bundle = Bundle(for: type(of: self))
+        
+        // framework 靜態寫法
+        
+        let path = Bundle(for: type(of: self)).path(forResource: "JTDCategoryView", ofType: "framework")!
+        let resource_bundle = Bundle(path: path)
+        let nib = UINib(nibName: "CategoryCell", bundle: resource_bundle)
+        self.register(nib, forCellWithReuseIdentifier: "CategoryCell")
+        
+        // 動態寫法
+        //self.register(UINib(nibName: "CategoryCell", bundle: bundle), forCellWithReuseIdentifier: "CategoryCell")
     }
     
     func setCurrentCellBackgroundColor(color:UIColor) {

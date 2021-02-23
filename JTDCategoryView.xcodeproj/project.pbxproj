@@ -6,18 +6,44 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		08AB824125E4DFFE00ACB60B /* JTDCategoryView-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 08AB824225E4DFFE00ACB60B /* Build configuration list for PBXAggregateTarget "JTDCategoryView-Universal" */;
+			buildPhases = (
+				08AB824725E4E01300ACB60B /* ShellScript */,
+			);
+			dependencies = (
+				08AB825125E4E13C00ACB60B /* PBXTargetDependency */,
+			);
+			name = "JTDCategoryView-Universal";
+			productName = "JTDCategoryView-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		08AB814925E3594200ACB60B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AB814825E3594200ACB60B /* Assets.xcassets */; };
+		08AB829B25E4E74000ACB60B /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E35371F22644C7500B7D981 /* CategoryCell.xib */; };
+		08AB829E25E4E74300ACB60B /* JTDCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E35372322644C7500B7D981 /* JTDCategoryView.xib */; };
 		2E35371922644BD700B7D981 /* JTDCategoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E35371722644BD700B7D981 /* JTDCategoryView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E35372422644C7500B7D981 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E35371F22644C7500B7D981 /* CategoryCell.xib */; };
 		2E35372522644C7500B7D981 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35372022644C7500B7D981 /* CategoryCell.swift */; };
 		2E35372622644C7500B7D981 /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35372122644C7500B7D981 /* CategoryCollectionView.swift */; };
 		2E35372722644C7500B7D981 /* JTDCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35372222644C7500B7D981 /* JTDCategoryView.swift */; };
-		2E35372822644C7500B7D981 /* JTDCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E35372322644C7500B7D981 /* JTDCategoryView.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08AB825025E4E13C00ACB60B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E35370B22644BD700B7D981 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E35371322644BD700B7D981;
+			remoteInfo = JTDCategoryView;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		08AB814825E3594200ACB60B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08AB82CD25E4EDDD00ACB60B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E35371422644BD700B7D981 /* JTDCategoryView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTDCategoryView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E35371722644BD700B7D981 /* JTDCategoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTDCategoryView.h; sourceTree = "<group>"; };
 		2E35371822644BD700B7D981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,10 +73,19 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		08AB82CC25E4EDDD00ACB60B /* JTDCategoryViewBundle */ = {
+			isa = PBXGroup;
+			children = (
+				08AB82CD25E4EDDD00ACB60B /* Info.plist */,
+			);
+			path = JTDCategoryViewBundle;
+			sourceTree = "<group>";
+		};
 		2E35370A22644BD700B7D981 = {
 			isa = PBXGroup;
 			children = (
 				2E35371622644BD700B7D981 /* JTDCategoryView */,
+				08AB82CC25E4EDDD00ACB60B /* JTDCategoryViewBundle */,
 				2E35371522644BD700B7D981 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +154,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = iOSDeveloper;
 				TargetAttributes = {
+					08AB824125E4DFFE00ACB60B = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					2E35371322644BD700B7D981 = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
@@ -138,6 +176,7 @@
 			projectRoot = "";
 			targets = (
 				2E35371322644BD700B7D981 /* JTDCategoryView */,
+				08AB824125E4DFFE00ACB60B /* JTDCategoryView-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -147,13 +186,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E35372822644C7500B7D981 /* JTDCategoryView.xib in Resources */,
 				08AB814925E3594200ACB60B /* Assets.xcassets in Resources */,
-				2E35372422644C7500B7D981 /* CategoryCell.xib in Resources */,
+				08AB829E25E4E74300ACB60B /* JTDCategoryView.xib in Resources */,
+				08AB829B25E4E74000ACB60B /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08AB824725E4E01300ACB60B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "####################\n# Optional Value\n####################\nREVEAL_ARCHIVE_IN_FINDER=true\n\n####################\n# Required Values\n####################\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\necho PROJECT_NAME\necho \"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n######################\n# Build Frameworks\n######################\n\nxcodebuild -arch x86_64 -target ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build BITCODE_GENERATION_MODE=bitcode CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -target ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build BITCODE_GENERATION_MODE=bitcode CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n######################\n# Create directory for universal\n######################\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\nmkdir \"${FRAMEWORK}\"\n######################\n# Copy files Framework\n######################\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n######################\n# Printing Paths for your referance\n######################\necho SIMULATOR_LIBRARY_PATH\necho \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\necho DEVICE_LIBRARY_PATH\necho \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\necho UNIVERSAL_LIBRARY_DIR\necho \"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n######################\n# Make an universal binary\n######################\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n######################\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\n######################\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\nrm -rf \"$OUTPUT_DIR\"\nmkdir -p \"$OUTPUT_DIR\"\ncp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E35371022644BD700B7D981 /* Sources */ = {
@@ -168,7 +227,35 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		08AB825125E4E13C00ACB60B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E35371322644BD700B7D981 /* JTDCategoryView */;
+			targetProxy = 08AB825025E4E13C00ACB60B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		08AB824325E4DFFE00ACB60B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UX5VYFQ2PJ;
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		08AB824425E4DFFE00ACB60B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UX5VYFQ2PJ;
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		2E35371A22644BD700B7D981 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -301,6 +388,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JTDCategoryView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -308,6 +396,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSDeveloper.JTDCategoryView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -327,6 +417,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JTDCategoryView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,6 +425,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSDeveloper.JTDCategoryView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -345,6 +437,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		08AB824225E4DFFE00ACB60B /* Build configuration list for PBXAggregateTarget "JTDCategoryView-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08AB824325E4DFFE00ACB60B /* Debug */,
+				08AB824425E4DFFE00ACB60B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2E35370E22644BD700B7D981 /* Build configuration list for PBXProject "JTDCategoryView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
