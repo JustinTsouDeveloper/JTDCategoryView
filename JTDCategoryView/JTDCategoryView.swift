@@ -49,7 +49,7 @@ public class JTDCategoryView: UIView {
 //        let nib = UINib(nibName: "JTDCategoryView", bundle: resource_bundle)
         
         
-        // 靜態寫法
+        // 靜態寫法        
         let path = Bundle(for: type(of: self)).path(forResource: "JTDCategoryView", ofType: "framework")!
         let resource_bundle = Bundle(path: path)
         let nib = UINib(nibName: "JTDCategoryView", bundle: resource_bundle)
