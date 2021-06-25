@@ -1,0 +1,11 @@
+framework module JTDCategoryView {
+  umbrella header "JTDCategoryView.h"
+
+  export *
+  module * { export * }
+}
+
+module JTDCategoryView.Swift {
+    header "JTDCategoryView-Swift.h"
+    requires objc
+}

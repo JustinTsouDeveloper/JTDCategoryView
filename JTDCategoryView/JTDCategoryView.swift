@@ -50,8 +50,18 @@ public class JTDCategoryView: UIView {
         
         
         // 靜態寫法        
-        let path = Bundle(for: type(of: self)).path(forResource: "JTDCategoryView", ofType: "framework")!
+        let path = Bundle(for: type(of: self)).path(forResource: "JTDCategoryView", ofType: "framework") ?? ""
+        let path1 = Bundle(for: type(of: self)).path(forResource: "Pods/IncludeJTDCategoryViewSDK/IncludeJTDCategoryViewSDK/JTDCategoryView", ofType: "framework") ?? ""
+        let path2 = Bundle(for: type(of: self)).path(forResource: "Pods/IncludeJTDCategoryViewSDK/Frameworks/JTDCategoryView", ofType: "framework") ?? ""
+        
+        print("Bundle:\(Bundle(for: type(of: self)))")
+        print("path1:\(path1)")
+        print("path2:\(path2)")
+        
         let resource_bundle = Bundle(path: path)
+        
+        print("resource_bundle:\(resource_bundle)")
+        
         let nib = UINib(nibName: "JTDCategoryView", bundle: resource_bundle)
         
         contentView = nib.instantiate(withOwner: self, options: nil).first as? UIView
